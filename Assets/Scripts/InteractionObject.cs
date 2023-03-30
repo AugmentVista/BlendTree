@@ -15,12 +15,14 @@ public class InteractionObject : MonoBehaviour
     public List<string> dialogue;
 
     Info info;
+    DialogueBox dialogueBox;
 
 
     // Start is called before the first frame update
     void Start()
     {
         info = FindObjectOfType<Info>();
+        dialogueBox = FindObjectOfType<DialogueBox>();
     }
 
     public void Interact()
@@ -59,5 +61,6 @@ public class InteractionObject : MonoBehaviour
     void Dialogue()
     {
         UnityEngine.Debug.Log("Earwig");
+        dialogueBox.FillQueue(dialogue);
     }
 }

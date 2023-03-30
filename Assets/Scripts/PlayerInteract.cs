@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    // Intellisense = false
+    // Freeze game time while text dialogue is being displayed so that moving characters do not run away from you mid conversation
     // GameObject that stores current object in range
-    GameObject CurrentObject; 
+    GameObject CurrentObject;
+    GlobalVariables globalVariables;
+
+    void Start()
+    {
+        globalVariables = FindObjectOfType<GlobalVariables>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (!globalVariables.isTalking && Input.GetKeyDown("space"))
         {
             Interact();
         }
