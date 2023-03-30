@@ -13,6 +13,7 @@ public class InteractionObject : MonoBehaviour
 
     public string infoText;
     public List<string> dialogue;
+    public int ItemsCollected;
 
     Info info;
     DialogueBox dialogueBox;
@@ -23,6 +24,7 @@ public class InteractionObject : MonoBehaviour
     {
         info = FindObjectOfType<Info>();
         dialogueBox = FindObjectOfType<DialogueBox>();
+        ItemsCollected = 0;
     }
 
     public void Interact()
@@ -50,8 +52,10 @@ public class InteractionObject : MonoBehaviour
     }
     void Pickup()
     {
-        UnityEngine.Debug.Log("Acquired");
+        UnityEngine.Debug.Log("you have picked up" + ItemsCollected);
         gameObject.SetActive(false);
+        ItemsCollected = ItemsCollected + 1;
+
     }
     void Info()
     {
