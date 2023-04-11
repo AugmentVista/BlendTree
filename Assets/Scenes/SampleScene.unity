@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 76471058}
   - component: {fileID: 76471057}
   m_Layer: 0
-  m_Name: VillageRoads
+  m_Name: VillageRoads L0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12393,7 +12393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.81, y: -4.02}
+  m_AnchoredPosition: {x: 1.3, y: -2.97}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &170006496
@@ -14194,7 +14194,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 15
   m_TargetDisplay: 0
 --- !u!1 &641328747
 GameObject:
@@ -14208,7 +14208,7 @@ GameObject:
   - component: {fileID: 641328750}
   - component: {fileID: 641328749}
   m_Layer: 0
-  m_Name: Village Objects
+  m_Name: Village Objects L3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28582,7 +28582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &761255470
 Transform:
   m_ObjectHideFlags: 0
@@ -37821,7 +37821,7 @@ GameObject:
   - component: {fileID: 974489769}
   - component: {fileID: 974489771}
   m_Layer: 0
-  m_Name: Village
+  m_Name: Village L9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37882,7 +37882,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 9
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 9.296875, y: 13.15625, z: 0}
   m_MaxChunkCount: 16
@@ -38732,7 +38732,7 @@ GameObject:
   - component: {fileID: 997227320}
   - component: {fileID: 997227322}
   m_Layer: 0
-  m_Name: Relics
+  m_Name: Relics L4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39279,7 +39279,7 @@ GameObject:
   - component: {fileID: 1147293726}
   - component: {fileID: 1147293727}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Wolf L8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39341,7 +39341,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 99
+  m_SortingOrder: 8
   m_Sprite: {fileID: 505845312, guid: e6f12637d082684478ae431386bcca13, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -39867,7 +39867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.81, y: -0.73}
+  m_AnchoredPosition: {x: 0.23, y: -2.92}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1453596999
@@ -84745,7 +84745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1887291795
 Transform:
   m_ObjectHideFlags: 0
