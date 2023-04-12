@@ -7,17 +7,18 @@ public class InteractionObject : MonoBehaviour
 {
     public enum Types
     {
-        nothing, pickup, info, dialogue
+        nothing, pickup, info, dialogue, 
     }
     public Types type;
 
     public string infoText;
     public List<string> dialogue;
+    public List<string> SecondDialogue;
     public int ItemsCollected;
-
     Info info;
     DialogueBox dialogueBox;
 
+  
 
     // Start is called before the first frame update
     void Start()
@@ -52,19 +53,18 @@ public class InteractionObject : MonoBehaviour
     }
     void Pickup()
     {
-        UnityEngine.Debug.Log("you have picked up" + ItemsCollected);
+       
         gameObject.SetActive(false);
-        ItemsCollected = ItemsCollected + 1;
 
     }
     void Info()
     {
-        UnityEngine.Debug.Log("Sheep");
+        UnityEngine.Debug.Log("Info Display");
         info.SetText(infoText);
     }
     void Dialogue()
     {
-        UnityEngine.Debug.Log("Earwig");
+        UnityEngine.Debug.Log("Dialogue registering");
         dialogueBox.FillQueue(dialogue);
     }
 }

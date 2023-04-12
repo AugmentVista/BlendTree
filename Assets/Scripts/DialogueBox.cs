@@ -11,6 +11,8 @@ public class DialogueBox : MonoBehaviour
     UnityEngine.UI.Image BackgroundPanel;
     Queue<string> TextQueue = new Queue<string>();
     GlobalVariables globalVariables;
+    GlobalVariables Spokento;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,23 @@ public class DialogueBox : MonoBehaviour
         }
     }
 
-    public void FillQueue(List<string> dialogue)
+    public void SecondQueue(List<string> SecondDialogue)
+    {
+        TextQueue.Clear();
+        foreach (string SecondDialogueItem in SecondDialogue)
+        {
+            TextQueue.Enqueue(SecondDialogueItem);
+        }
+        BackgroundPanel.enabled = true;
+        NextLine();
+        globalVariables.SpokenTo = true;
+    }
+        // if i set a condition that turns off isTalking on the pickup of an item then i can set a new bool to play the second text
+
+
+
+
+        public void FillQueue(List<string> dialogue)
     {
         TextQueue.Clear();
         foreach(string dialogueItem in dialogue)
@@ -41,6 +59,37 @@ public class DialogueBox : MonoBehaviour
         NextLine();
         globalVariables.isTalking = true;
     }
+
+
+
+    //void NextLine()
+   // {
+        //switch (TextQueue.Count == 0)
+        //{
+         // case 
+
+           //case (TextQueue.Count == 0):
+                //ScreenText.text = "";
+                //globalVariables.isTalking = false;
+                //BackgroundPanel.enabled = false;
+               //break;
+
+
+
+                //return;
+       // }
+
+        //ScreenText.text = TextQueue.Dequeue();
+   // }
+
+
+
+
+
+
+
+
+
     void NextLine()
     {
         if (TextQueue.Count == 0)

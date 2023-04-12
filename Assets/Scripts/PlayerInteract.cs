@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    // Freeze game time while text dialogue is being displayed so that moving characters do not run away from you mid conversation
+    
     // GameObject that stores current object in range
     GameObject CurrentObject;
     GlobalVariables globalVariables;
