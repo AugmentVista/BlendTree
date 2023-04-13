@@ -12,6 +12,7 @@ public class DialogueBox : MonoBehaviour
     Queue<string> TextQueue = new Queue<string>();
     GlobalVariables globalVariables;
     GlobalVariables Spokento;
+    InteractionObject SecondToFirst;
 
 
     // Start is called before the first frame update
@@ -43,15 +44,15 @@ public class DialogueBox : MonoBehaviour
         NextLine();
         globalVariables.SpokenTo = true;
     }
-        // if i set a condition that turns off isTalking on the pickup of an item then i can set a new bool to play the second text
+    // if i set a condition that turns off isTalking on the pickup of an item then i can set a new bool to play the second text
 
 
 
 
-        public void FillQueue(List<string> dialogue)
+    public void FillQueue(List<string> dialogue)
     {
         TextQueue.Clear();
-        foreach(string dialogueItem in dialogue)
+        foreach (string dialogueItem in dialogue)
         {
             TextQueue.Enqueue(dialogueItem);
         }
@@ -62,44 +63,49 @@ public class DialogueBox : MonoBehaviour
 
 
 
-    //void NextLine()
-   // {
-        //switch (TextQueue.Count == 0)
-        //{
-         // case 
-
-           //case (TextQueue.Count == 0):
-                //ScreenText.text = "";
-                //globalVariables.isTalking = false;
-                //BackgroundPanel.enabled = false;
-               //break;
-
-
-
-                //return;
-       // }
-
-        //ScreenText.text = TextQueue.Dequeue();
-   // }
-
-
-
-
-
-
-
-
-
     void NextLine()
+    {
+        switch
+        {
+            case 1: 
+                if (TextQueue.Count == 0) && Collectable Stars == false);
+                { this.SecondToFirst();
+                    ScreenText.text = "";
+                    globalVariables.isTalking = false;
+                    BackgroundPanel.enabled = false;
+                    return;
+                    break;
+            case 2: 
+                if (TextQueue.Count == 0);
+                { ScreenText.text = "";
+                    globalVariables.isTalking = false;
+                    BackgroundPanel.enabled = false;
+                    return;
+                    break;
+                }
+                ScreenText.text = TextQueue.Dequeue();
+        }
+      }
+
+    }   
+}    
+
+
+    
+
+
+
+
+
+    /*void NextLine()
     {
         if (TextQueue.Count == 0)
         {
             ScreenText.text = "";
             globalVariables.isTalking = false;
             BackgroundPanel.enabled = false;
-            return;
+            return;         
         }
 
         ScreenText.text = TextQueue.Dequeue();
-    }
-}
+    }*/

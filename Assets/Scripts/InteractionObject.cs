@@ -25,7 +25,7 @@ public class InteractionObject : MonoBehaviour
     {
         info = FindObjectOfType<Info>();
         dialogueBox = FindObjectOfType<DialogueBox>();
-        ItemsCollected = 0;
+ 
     }
 
     public void Interact()
@@ -66,5 +66,14 @@ public class InteractionObject : MonoBehaviour
     {
         UnityEngine.Debug.Log("Dialogue registering");
         dialogueBox.FillQueue(dialogue);
+    }
+
+    public void SecondToFirst()
+    {
+        dialogue.Clear();
+        foreach (string line in SecondDialogue)
+        {
+            dialogue.Add(line);
+        }
     }
 }

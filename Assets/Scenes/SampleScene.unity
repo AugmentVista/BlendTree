@@ -11430,7 +11430,7 @@ GameObject:
   - component: {fileID: 92739856}
   - component: {fileID: 92739855}
   m_Layer: 3
-  m_Name: Hidden fella
+  m_Name: Brother of Bink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11558,10 +11558,12 @@ MonoBehaviour:
   type: 3
   infoText: 
   dialogue:
+  - ...
   - 
   - 
-  - 
-  SecondDialogue: []
+  SecondDialogue:
+  - I wish my brother shared some of his stars with me
+  - They looked so tasty.
   ItemsCollected: 0
 --- !u!1 &136758747
 GameObject:
@@ -12189,7 +12191,10 @@ MonoBehaviour:
   - Bink owes me 20$ He has been avoiding me
   - Could you ask him to pay me back?
   SecondDialogue:
-  - Do not display
+  - Hey! You found my money!
+  - 'Now I can invest it into this NFT BLORP was showing me '
+  - If it is ready could you get it for me?
+  - I'd let you eat half of it if you do.
   ItemsCollected: 0
 --- !u!1 &173423760
 GameObject:
@@ -12617,9 +12622,10 @@ MonoBehaviour:
   - 'We haven''t had a vistor in a long time '
   - You should speak to Steve, I heard he is looking for help.
   SecondDialogue:
-  - 
-  - 
-  - 
+  - 'How could you! '
+  - 'Doomed, we are all Doomed! '
+  - 'Steve must not have the NFT it should be mine! '
+  - 'I''ll pay you 30$ if you give it to be instead. '
   ItemsCollected: 0
 --- !u!1 &273037663
 GameObject:
@@ -38133,9 +38139,9 @@ MonoBehaviour:
   - You find all my stars and I give you money
   - Staarrrrsssss
   SecondDialogue:
-  - 
-  - 
-  - 
+  - Thank you for getting me lunch for me
+  - Munch! Crunch! Crack-Snap!
+  - Here, take this +20$
   ItemsCollected: 0
 --- !u!61 &1453597003
 BoxCollider2D:
@@ -62870,6 +62876,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 12
+      m_TileSpriteIndex: 12
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 1, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -82276,7 +82292,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 4355
+  - m_RefCount: 4356
     m_Data: {fileID: 11400000, guid: 0b903c3201b1a444ab426a51da4507ae, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -82303,10 +82319,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 4355
+  - m_RefCount: 4356
     m_Data: {fileID: -1376915605, guid: d6f2f386d731284479b1d40e36353757, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 4355
+  - m_RefCount: 4356
     m_Data:
       e00: 1
       e01: 0
@@ -82325,7 +82341,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 4355
+  - m_RefCount: 4356
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
