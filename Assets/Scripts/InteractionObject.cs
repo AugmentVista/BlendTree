@@ -14,7 +14,6 @@ public class InteractionObject : MonoBehaviour
     public string infoText;
     public List<string> dialogue;
     public List<string> SecondDialogue;
-    public int ItemsCollected;
     Info info;
     DialogueBox dialogueBox;
 
@@ -65,7 +64,7 @@ public class InteractionObject : MonoBehaviour
     void Dialogue()
     {
         UnityEngine.Debug.Log("Dialogue registering");
-        dialogueBox.FillQueue(dialogue);
+        dialogueBox.FillQueue(dialogue, this);
     }
 
     public void SecondToFirst()

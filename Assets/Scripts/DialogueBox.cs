@@ -12,7 +12,7 @@ public class DialogueBox : MonoBehaviour
     Queue<string> TextQueue = new Queue<string>();
     GlobalVariables globalVariables;
     GlobalVariables Spokento;
-    InteractionObject SecondToFirst;
+    InteractionObject CurrentObject;
 
 
     // Start is called before the first frame update
@@ -49,8 +49,9 @@ public class DialogueBox : MonoBehaviour
 
 
 
-    public void FillQueue(List<string> dialogue)
+    public void FillQueue(List<string> dialogue, InteractionObject interactionObj)
     {
+        CurrentObject = interactionObj;
         TextQueue.Clear();
         foreach (string dialogueItem in dialogue)
         {
@@ -63,31 +64,65 @@ public class DialogueBox : MonoBehaviour
 
 
 
-    void NextLine()
+    /*void NextLine()
     {
         switch
         {
             case 1: 
-                if (TextQueue.Count == 0) && Collectable Stars == false);
+                if (TextQueue.Count == 0) && (CollectableStars == false);
                 { this.SecondToFirst();
                     ScreenText.text = "";
                     globalVariables.isTalking = false;
                     BackgroundPanel.enabled = false;
                     return;
-                    break;
             case 2: 
                 if (TextQueue.Count == 0);
                 { ScreenText.text = "";
                     globalVariables.isTalking = false;
                     BackgroundPanel.enabled = false;
                     return;
-                    break;
                 }
                 ScreenText.text = TextQueue.Dequeue();
         }
       }
 
-    }   
+    }  */
+    
+    void NextLine()
+    {
+        if (!globalVariables.CollectablePlaceholder && !globalVariables.CollectableStars && TextQueue.Count == 0)
+        {
+            CurrentObject.SecondToFirst();
+            ScreenText.text = "";
+            globalVariables.isTalking = false;
+            BackgroundPanel.enabled = false;
+            ScreenText.text = TextQueue.Dequeue();
+        }
+        else if (!globalVariables.CollectablePlaceholder && TextQueue.Count == 0)
+        {
+            CurrentObject.SecondToFirst();
+            ScreenText.text = "";
+            globalVariables.isTalking = false;
+            BackgroundPanel.enabled = false;
+            ScreenText.text = TextQueue.Dequeue();
+        }
+        else if (!globalVariables.CollectableStars && TextQueue.Count == 0)
+        {
+            CurrentObject.SecondToFirst();
+            ScreenText.text = "";
+            globalVariables.isTalking = false;
+            BackgroundPanel.enabled = false;
+            ScreenText.text = TextQueue.Dequeue();
+        }
+        else if (TextQueue.Count == 0)
+        {
+            ScreenText.text = "";
+            globalVariables.isTalking = false;
+            BackgroundPanel.enabled = false;
+            ScreenText.text = TextQueue.Dequeue();
+            
+        }
+    }
 }    
 
 
@@ -96,16 +131,3 @@ public class DialogueBox : MonoBehaviour
 
 
 
-
-    /*void NextLine()
-    {
-        if (TextQueue.Count == 0)
-        {
-            ScreenText.text = "";
-            globalVariables.isTalking = false;
-            BackgroundPanel.enabled = false;
-            return;         
-        }
-
-        ScreenText.text = TextQueue.Dequeue();
-    }*/
