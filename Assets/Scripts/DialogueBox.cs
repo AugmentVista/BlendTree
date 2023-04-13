@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using static System.Net.Mime.MediaTypeNames;
+
 
 public class DialogueBox : MonoBehaviour
 {
@@ -11,7 +11,6 @@ public class DialogueBox : MonoBehaviour
     UnityEngine.UI.Image BackgroundPanel;
     Queue<string> TextQueue = new Queue<string>();
     GlobalVariables globalVariables;
-    GlobalVariables Spokento;
     InteractionObject CurrentObject;
 
 
@@ -42,7 +41,6 @@ public class DialogueBox : MonoBehaviour
         }
         BackgroundPanel.enabled = true;
         NextLine();
-        globalVariables.SpokenTo = true;
     }
     // if i set a condition that turns off isTalking on the pickup of an item then i can set a new bool to play the second text
 

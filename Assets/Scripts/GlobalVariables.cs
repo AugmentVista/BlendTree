@@ -5,14 +5,12 @@ using UnityEngine;
 public class GlobalVariables : MonoBehaviour
 {
     public bool isTalking;
-    public bool SpokenTo;
     public bool CollectableStars;
     public bool CollectablePlaceholder;
 
     void Start()
     {
         isTalking = false;
-        SpokenTo = false;
         CollectableStars = true;
         CollectablePlaceholder = true;
     }
