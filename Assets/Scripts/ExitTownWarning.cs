@@ -2,27 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class ExitTownWarning : MonoBehaviour
 {
-        bool WithinTown = true;
-        public GameObject Town; 
-  
+    bool triggered;
+    Info info;
 
-    
-    void Start()
+    private void Start()
     {
-        void OnTriggerExit2D(Collider2D TownExit)
-        {
-            WithinTown = false;
-        }
-       
-        
-        
-        if (!WithinTown)
-        {
-            Town = GameObject.Find("TownExit");
-            Town.SetActive(false);
-        }
+        info = FindObjectOfType<Info>();
+        triggered = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (triggered) return;
+        if (other.tag == "Player") info.SetText("You're entering Gnome territory!");
+        triggered = true;
     }
 }

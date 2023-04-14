@@ -51,13 +51,23 @@ public class DialogueBox : MonoBehaviour
     {
         CurrentObject = interactionObj;
         TextQueue.Clear();
+
+        if (globalVariables.BLORPunleashed)
+        {
+            CurrentObject.ThirdToFirst();
+        }
+        else if (globalVariables.CollectableStars)
+        {
+            CurrentObject.SecondToFirst();
+        }
+
         foreach (string dialogueItem in dialogue)
         {
             TextQueue.Enqueue(dialogueItem);
         }
         BackgroundPanel.enabled = true;
-        NextLine();
         globalVariables.isTalking = true;
+        NextLine();
     }
 
 
@@ -66,28 +76,8 @@ public class DialogueBox : MonoBehaviour
     
     void NextLine()
     {
-        if (!globalVariables.FLORPunleashed && !globalVariables.CollectableStars && TextQueue.Count == 0)
+        if (TextQueue.Count > 0)
         {
-            CurrentObject.SecondToFirst();
-            ScreenText.text = "";
-            globalVariables.isTalking = false;
-            BackgroundPanel.enabled = false;
-            ScreenText.text = TextQueue.Dequeue();
-        }
-        else if (!globalVariables.FLORPunleashed && TextQueue.Count == 0)
-        {
-            CurrentObject.SecondToFirst();
-            ScreenText.text = "";
-            globalVariables.isTalking = false;
-            BackgroundPanel.enabled = false;
-            ScreenText.text = TextQueue.Dequeue();
-        }
-        else if (!globalVariables.CollectableStars && TextQueue.Count == 0)
-        {
-            CurrentObject.SecondToFirst();
-            ScreenText.text = "";
-            globalVariables.isTalking = false;
-            BackgroundPanel.enabled = false;
             ScreenText.text = TextQueue.Dequeue();
         }
         else if (TextQueue.Count == 0)
@@ -95,8 +85,6 @@ public class DialogueBox : MonoBehaviour
             ScreenText.text = "";
             globalVariables.isTalking = false;
             BackgroundPanel.enabled = false;
-            ScreenText.text = TextQueue.Dequeue();
-            
         }
     }
 }    

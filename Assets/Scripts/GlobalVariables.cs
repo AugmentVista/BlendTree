@@ -6,28 +6,28 @@ public class GlobalVariables : MonoBehaviour
 {
     public bool isTalking;
     public bool CollectableStars;
-    public bool FLORPunleashed;
+    public bool BLORPunleashed;
 
     void Start()
     {
         isTalking = false;
-        CollectableStars = true;
-        FLORPunleashed = true;
+        CollectableStars = false;
+        BLORPunleashed = false;
     }
 
     void Update()
     {
         if (!GameObject.FindWithTag("Star")) 
         {
-            CollectableStars = false;
+            CollectableStars = true;
 
-            UnityEngine.Debug.Log("No More stars");
+            //Debug.Log("No More stars");
         }
-        if (!GameObject.FindWithTag("PlaceHolder"))
+        if (!GameObject.FindWithTag("GNOME"))
         {
-            FLORPunleashed = false;
+            BLORPunleashed = true;
 
-            UnityEngine.Debug.Log("No More placeholders");
+            //Debug.Log("No More gnomes");
         }
 
     }

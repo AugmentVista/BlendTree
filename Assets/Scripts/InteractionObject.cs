@@ -14,6 +14,7 @@ public class InteractionObject : MonoBehaviour
     public string infoText;
     public List<string> dialogue;
     public List<string> SecondDialogue;
+    public List<string> ThirdDialogue;
     Info info;
     DialogueBox dialogueBox;
 
@@ -71,6 +72,14 @@ public class InteractionObject : MonoBehaviour
     {
         dialogue.Clear();
         foreach (string line in SecondDialogue)
+        {
+            dialogue.Add(line);
+        }
+    }
+    public void ThirdToFirst()
+    {
+        dialogue.Clear();
+        foreach (string line in ThirdDialogue)
         {
             dialogue.Add(line);
         }
