@@ -6,13 +6,13 @@ public class GlobalVariables : MonoBehaviour
 {
     public bool isTalking;
     public bool CollectableStars;
-    public bool CollectablePlaceholder;
+    public bool FLORPunleashed;
 
     void Start()
     {
         isTalking = false;
         CollectableStars = true;
-        CollectablePlaceholder = true;
+        FLORPunleashed = true;
     }
 
     void Update()
@@ -25,7 +25,7 @@ public class GlobalVariables : MonoBehaviour
         }
         if (!GameObject.FindWithTag("PlaceHolder"))
         {
-            CollectablePlaceholder = false;
+            FLORPunleashed = false;
 
             UnityEngine.Debug.Log("No More placeholders");
         }

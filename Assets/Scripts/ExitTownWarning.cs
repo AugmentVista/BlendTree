@@ -9,16 +9,20 @@ public class ExitTownWarning : MonoBehaviour
         public GameObject Town; 
   
 
-    // Update is called once per frame
-    void Update()
+    
+    void Start()
     {
         void OnTriggerExit2D(Collider2D TownExit)
         {
             WithinTown = false;
         }
+       
+        
+        
         if (!WithinTown)
         {
-            GameObject.FindObjectOfType<TownExit>
+            Town = GameObject.Find("TownExit");
+            Town.SetActive(false);
         }
     }
 }
